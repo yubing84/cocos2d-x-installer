@@ -1,0 +1,1 @@
+Welcome to Cocos2d-x engine.
