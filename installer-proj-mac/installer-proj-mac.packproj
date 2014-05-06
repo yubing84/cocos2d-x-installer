@@ -26,7 +26,7 @@
 					<key>International</key>
 					<dict>
 						<key>Mode</key>
-						<integer>1</integer>
+						<integer>0</integer>
 						<key>Path</key>
 						<string>resources/license.txt</string>
 						<key>Path Type</key>
@@ -424,6 +424,16 @@
 					</dict>
 					<dict>
 						<key>Path</key>
+						<string>AndroidPaths.bundle</string>
+						<key>Path Type</key>
+						<integer>2</integer>
+						<key>Status</key>
+						<true/>
+						<key>Type</key>
+						<integer>1</integer>
+					</dict>
+					<dict>
+						<key>Path</key>
 						<string>FinishUp</string>
 						<key>Type</key>
 						<integer>0</integer>
@@ -442,11 +452,11 @@
 					<key>IFInstallationScriptsPostflight</key>
 					<dict>
 						<key>Path</key>
-						<string>resources/postflight.sh</string>
+						<string></string>
 						<key>Path Type</key>
-						<integer>2</integer>
+						<integer>1</integer>
 						<key>Status</key>
-						<true/>
+						<false/>
 					</dict>
 					<key>IFInstallationScriptsPostinstall</key>
 					<dict>
