@@ -26,7 +26,7 @@
 					<key>International</key>
 					<dict>
 						<key>Mode</key>
-						<integer>0</integer>
+						<integer>1</integer>
 						<key>Path</key>
 						<string>resources/license.txt</string>
 						<key>Path Type</key>
@@ -38,7 +38,7 @@
 					<key>International</key>
 					<dict>
 						<key>Mode</key>
-						<integer>0</integer>
+						<integer>1</integer>
 						<key>Path</key>
 						<string>resources/readme.html</string>
 						<key>Path Type</key>
@@ -424,7 +424,7 @@
 					</dict>
 					<dict>
 						<key>Path</key>
-						<string>AndroidPaths.bundle</string>
+						<string>plugins/AndroidPaths/Build/Products/Release/AndroidPaths.bundle</string>
 						<key>Path Type</key>
 						<integer>2</integer>
 						<key>Status</key>
