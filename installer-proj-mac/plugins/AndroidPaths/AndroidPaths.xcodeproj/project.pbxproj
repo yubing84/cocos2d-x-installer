@@ -32,6 +32,11 @@
 		FA307132191609FA00EA69FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA307134191609FA00EA69FC /* InstallerSections.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = InstallerSections.plist; sourceTree = "<group>"; };
 		FA3071761918BCEB00EA69FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA30717A1918C29C00EA69FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		FA30717C1918C2EC00EA69FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA30717E1918C57900EA69FC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		FA30717F1918C57900EA69FC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		FA3071821918C83D00EA69FC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/AndroidPaths.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +149,7 @@
 				en,
 				Base,
 				zh,
+				"zh-Hans",
 			);
 			mainGroup = FA307110191609FA00EA69FC;
 			productRefGroup = FA30711A191609FA00EA69FC /* Products */;
@@ -186,6 +192,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA30712F191609FA00EA69FC /* Base */,
+				FA3071821918C83D00EA69FC /* zh-Hans */,
 			);
 			name = AndroidPaths.xib;
 			sourceTree = "<group>";
@@ -194,6 +201,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA307132191609FA00EA69FC /* en */,
+				FA30717A1918C29C00EA69FC /* Base */,
+				FA30717E1918C57900EA69FC /* zh-Hans */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -202,6 +211,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				FA3071761918BCEB00EA69FC /* en */,
+				FA30717C1918C2EC00EA69FC /* Base */,
+				FA30717F1918C57900EA69FC /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
