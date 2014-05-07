@@ -14,3 +14,9 @@ xcschememanagement.plist
 xcuserdata/
 DerivedData/
 installer-proj-mac/plugins/AndroidPaths/Build/*
+
+# Ignore python related local files
+.idea/
+
+# Ignore the engine
+cocos2d-x*/
