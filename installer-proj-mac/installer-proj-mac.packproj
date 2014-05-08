@@ -52,7 +52,7 @@
 						<key>Mode</key>
 						<integer>1</integer>
 						<key>Path</key>
-						<string>resources/welcome.txt</string>
+						<string>resources/welcome.html</string>
 						<key>Path Type</key>
 						<integer>2</integer>
 					</dict>
@@ -578,7 +578,7 @@
 		<key>10.1 Compatibility</key>
 		<true/>
 		<key>Build Path</key>
-		<string>generated</string>
+		<string>../release</string>
 		<key>Build Path Type</key>
 		<integer>2</integer>
 		<key>Comment</key>
