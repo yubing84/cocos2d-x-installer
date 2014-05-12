@@ -111,7 +111,8 @@ def get_engine(repo_dir, repo_name):
 
     # copy the repo into dst dir
     dst_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-    dst_repo_dir = os.path.join(dst_dir, repo_name)
+    framework_dir = os.path.join(dst_dir, "cocos", "frameworks")
+    dst_repo_dir = os.path.join(framework_dir, repo_name)
     if os.path.exists(dst_repo_dir):
         shutil.rmtree(dst_repo_dir)
     print("> Copying repo %s into %s" % (repo_dir, dst_repo_dir))
@@ -141,8 +142,20 @@ def get_engine(repo_dir, repo_name):
 
     # unzip the file
     print("> Unzip the file")
-    unzip(zip_path, dst_dir)
+    unzip(zip_path, framework_dir)
     print("> Unzip succeed!")
+
+    # copy the external file
+    replace_dir = os.path.join(dst_repo_dir, "external")
+    replace_src_dir = os.path.join(repo_dir, "external")
+    if os.path.exists(replace_dir):
+        shutil.rmtree(replace_dir)
+    shutil.copytree(replace_src_dir, replace_dir)
+
+    # change the mode of all the files
+    pkg_dir = os.path.join(dst_dir, "cocos")
+    run_shell("chmod -R a+w %s" % pkg_dir)
+    # run_shell("chmod -R a+x %s" % pkg_dir)
 
     # remove the zip file
     print("> Remove the zip file")

@@ -38,7 +38,7 @@
 					<key>International</key>
 					<dict>
 						<key>Mode</key>
-						<integer>1</integer>
+						<integer>0</integer>
 						<key>Path</key>
 						<string>resources/readme.html</string>
 						<key>Path Type</key>
@@ -71,34 +71,17 @@
 							<array>
 								<dict>
 									<key>Children</key>
-									<array>
-										<dict>
-											<key>Children</key>
-											<array/>
-											<key>GID</key>
-											<integer>80</integer>
-											<key>Path</key>
-											<string>../cocos2d-x</string>
-											<key>Path Type</key>
-											<integer>2</integer>
-											<key>Privileges</key>
-											<integer>493</integer>
-											<key>Type</key>
-											<integer>3</integer>
-											<key>UID</key>
-											<integer>0</integer>
-										</dict>
-									</array>
+									<array/>
 									<key>GID</key>
 									<integer>80</integer>
 									<key>Path</key>
-									<string>cocos</string>
+									<string>../cocos</string>
 									<key>Path Type</key>
-									<integer>1</integer>
-									<key>Privileges</key>
-									<integer>509</integer>
-									<key>Type</key>
 									<integer>2</integer>
+									<key>Privileges</key>
+									<integer>511</integer>
+									<key>Type</key>
+									<integer>3</integer>
 									<key>UID</key>
 									<integer>0</integer>
 								</dict>
@@ -428,7 +411,7 @@
 						<key>Path Type</key>
 						<integer>2</integer>
 						<key>Status</key>
-						<true/>
+						<false/>
 						<key>Type</key>
 						<integer>1</integer>
 					</dict>

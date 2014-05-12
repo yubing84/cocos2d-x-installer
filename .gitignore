@@ -19,4 +19,4 @@ installer-proj-mac/plugins/AndroidPaths/Build/*
 .idea/
 
 # Ignore the engine
-cocos2d-x*/
+cocos*/
