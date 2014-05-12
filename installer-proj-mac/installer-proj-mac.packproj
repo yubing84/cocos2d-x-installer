@@ -435,11 +435,11 @@
 					<key>IFInstallationScriptsPostflight</key>
 					<dict>
 						<key>Path</key>
-						<string></string>
+						<string>resources/postflight.sh</string>
 						<key>Path Type</key>
-						<integer>1</integer>
+						<integer>2</integer>
 						<key>Status</key>
-						<false/>
+						<true/>
 					</dict>
 					<key>IFInstallationScriptsPostinstall</key>
 					<dict>
@@ -493,9 +493,9 @@
 						<key>IFPkgDescriptionDeleteWarning</key>
 						<string></string>
 						<key>IFPkgDescriptionDescription</key>
-						<string>Cocos2d-x engine, version 3.1</string>
+						<string>Cocos Engine include cocos2d-x &amp; Cocos Code IDE inside.</string>
 						<key>IFPkgDescriptionTitle</key>
-						<string>cocos2d-x</string>
+						<string>Cocos Engine</string>
 						<key>IFPkgDescriptionVersion</key>
 						<string>3.1</string>
 					</dict>
@@ -503,15 +503,15 @@
 				<key>Display Information</key>
 				<dict>
 					<key>CFBundleGetInfoString</key>
-					<string>cocos2d-x 3.1 Copyrights © 2014 Chukong-inc</string>
+					<string>Cocos Engine 3.1 Copyrights © 2014 Chukong-inc</string>
 					<key>CFBundleIconFile</key>
 					<string>resources/Icon.icns</string>
 					<key>CFBundleIconFile Path Type</key>
 					<integer>2</integer>
 					<key>CFBundleIdentifier</key>
-					<string>org.cocos2dx.cocos2d-x</string>
+					<string>org.cocos.engine</string>
 					<key>CFBundleName</key>
-					<string>cocos2d-x</string>
+					<string>Cocos Engine</string>
 					<key>CFBundleShortVersionString</key>
 					<string>3.1</string>
 				</dict>
@@ -548,7 +548,7 @@
 		<key>IFPkgFlagPackageSelection</key>
 		<integer>0</integer>
 		<key>Name</key>
-		<string>cocos2d-x</string>
+		<string>Cocos Engine</string>
 		<key>Status</key>
 		<integer>1</integer>
 		<key>Type</key>
