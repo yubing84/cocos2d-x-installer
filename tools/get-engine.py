@@ -152,10 +152,16 @@ def get_engine(repo_dir, repo_name):
         shutil.rmtree(replace_dir)
     shutil.copytree(replace_src_dir, replace_dir)
 
+    # copy the runtime files
+    runtime_dir = os.path.join(dst_repo_dir, "templates", "lua-template-runtime", "runtime")
+    runtime_src_dir = os.path.join(repo_dir, "templates", "lua-template-runtime", "runtime")
+    if os.path.exists(runtime_dir):
+        shutil.rmtree(runtime_dir)
+    shutil.copytree(runtime_src_dir, runtime_dir)
+
     # change the mode of all the files
     pkg_dir = os.path.join(dst_dir, "cocos")
-    run_shell("chmod -R a+w %s" % pkg_dir)
-    # run_shell("chmod -R a+x %s" % pkg_dir)
+    run_shell("chmod -R a=rwx %s" % pkg_dir)
 
     # remove the zip file
     print("> Remove the zip file")
