@@ -15,27 +15,11 @@ import shutil
 
 from optparse import OptionParser
 
+DST_X_DIR_NAME = "cocos2d-x"
+DST_JS_DIR_NAME = "cocos2d-js"
+
 def _os_is_win32():
     return sys.platform == 'win32'
-
-def _find_repo_dir():
-    path = os.path.abspath(os.getcwd())
-    while True:
-        if _os_is_win32():
-            # windows root path, eg. c:\
-            import re
-            if re.match(".+:\\\\$", path):
-                break
-        else:
-            # unix like use '/' as root path
-            if path == '/' :
-                break
-        if _is_a_repo(path):
-            return path
-
-        path = os.path.dirname(path)
-
-    return None
 
 def _is_a_repo(repo_dir):
     cfg_dir = os.path.join(repo_dir, ".git")
@@ -57,7 +41,7 @@ def unzip(source_filename, dest_dir):
         if name.endswith('/'):
             # directory
             if not os.path.exists(target):
-                os.mkdir(target)
+                os.makedirs(target)
         else:
             # file
             data = z.read(info.filename)
@@ -98,31 +82,19 @@ def run_shell(cmd, cwd=None):
 
     return p.returncode
 
-def get_engine(repo_dir, repo_name):
-    if repo_dir is None:
-        repo_dir = _find_repo_dir()
-        if repo_dir is None:
-            print("Current directory is not a git repository!\nPlease specify git repository by -d.")
-            return
-
-    if not _is_a_repo(repo_dir):
-        print("Directory %s is not a git repository!" % repo_dir)
-        return
-
+def _get_repo_files(repo_dir, dst_dir, repo_name):
     # copy the repo into dst dir
-    dst_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
-    framework_dir = os.path.join(dst_dir, "cocos", "frameworks")
-    dst_repo_dir = os.path.join(framework_dir, repo_name)
+    dst_repo_dir = os.path.join(dst_dir, repo_name)
     if os.path.exists(dst_repo_dir):
         shutil.rmtree(dst_repo_dir)
-    print("> Copying repo %s into %s" % (repo_dir, dst_repo_dir))
+    print("\t> Copying repo %s into %s" % (repo_dir, dst_repo_dir))
     shutil.copytree(repo_dir, dst_repo_dir)
-    print("> Copy succeed!")
+    print("\t> Copy succeed!")
 
     # get the make-package tool
     tool_path = os.path.join(dst_repo_dir, "tools", "make-package", "git-archive-all")
     if not os.path.isfile(tool_path):
-        print("Can't find the make-package tool")
+        print("\tCan't find the make-package tool")
         return
 
     zip_path = os.path.join(dst_dir, "%s.zip" % repo_name)
@@ -130,48 +102,84 @@ def get_engine(repo_dir, repo_name):
         os.remove(zip_path)
 
     # run the tool
-    print("> Generating the zip file")
+    print("\t> Generating the zip file")
+    tool_dir_name = os.path.dirname(tool_path)
     cmd = "\"%s\" \"%s\"" % (tool_path, zip_path)
-    run_shell(cmd, dst_repo_dir)
-    print("> Generate succeed!")
+    run_shell(cmd, tool_dir_name)
+    print("\t> Generate succeed!")
 
     # remove the copyed engine path
-    print("> Remove the engine directory")
+    print("\t> Remove the engine directory")
     shutil.rmtree(dst_repo_dir)
-    print("> Remove succeed!")
+    print("\t> Remove succeed!")
 
     # unzip the file
-    print("> Unzip the file")
-    unzip(zip_path, framework_dir)
-    print("> Unzip succeed!")
+    print("\t> Unzip the file")
+    unzip(zip_path, dst_dir)
+    print("\t> Unzip succeed!")
 
-    # copy the external file
-    replace_dir = os.path.join(dst_repo_dir, "external")
-    replace_src_dir = os.path.join(repo_dir, "external")
-    if os.path.exists(replace_dir):
-        shutil.rmtree(replace_dir)
-    shutil.copytree(replace_src_dir, replace_dir)
+    # remove the zip file
+    print("\t> Remove the zip file")
+    os.remove(zip_path)
+    print("\t> Remove succeed!")
 
-    # copy the runtime files
-    runtime_dir = os.path.join(dst_repo_dir, "templates", "lua-template-runtime", "runtime")
-    runtime_src_dir = os.path.join(repo_dir, "templates", "lua-template-runtime", "runtime")
-    if os.path.exists(runtime_dir):
-        shutil.rmtree(runtime_dir)
-    shutil.copytree(runtime_src_dir, runtime_dir)
+def _get_cocos2dx(x_dir, dst_dir):
+    # get engine from repo
+    print("> Get cocos2d-x from %s" % x_dir)
+    _get_repo_files(x_dir, dst_dir, DST_X_DIR_NAME)
+    # dst_repo_dir = os.path.join(dst_dir, DST_X_DIR_NAME)
+    #
+    # # copy the external file
+    # replace_dir = os.path.join(dst_repo_dir, "external")
+    # replace_src_dir = os.path.join(x_dir, "external")
+    # if os.path.exists(replace_dir):
+    #     shutil.rmtree(replace_dir)
+    # shutil.copytree(replace_src_dir, replace_dir)
+    #
+    # # copy the runtime files
+    # runtime_dir = os.path.join(dst_repo_dir, "templates", "lua-template-runtime", "runtime")
+    # runtime_src_dir = os.path.join(x_dir, "templates", "lua-template-runtime", "runtime")
+    # if os.path.exists(runtime_dir):
+    #     shutil.rmtree(runtime_dir)
+    # shutil.copytree(runtime_src_dir, runtime_dir)
+
+def _get_cocos2djs(js_dir, dst_dir):
+    # get engine from repo
+    print("\n>Get cocos2d-js from %s" % js_dir)
+    _get_repo_files(js_dir, dst_dir, DST_JS_DIR_NAME)
+
+    # remove the -x directory in js
+    inside_x_dir = os.path.join(dst_dir, DST_JS_DIR_NAME, "frameworks", "js-bindings", "cocos2d-x")
+    if os.path.isdir(inside_x_dir):
+        shutil.rmtree(inside_x_dir)
+
+def get_engine(x_dir, js_dir):
+    if x_dir is None or not _is_a_repo(x_dir):
+        print("Please specify cocos2d-x repository directory by -x.")
+        return
+
+    if js_dir is None or not _is_a_repo(js_dir):
+        print("Please specify cocos2d-js repository directory by -j.")
+        return
+
+    dst_dir = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
+    framework_dir = os.path.join(dst_dir, "cocos", "frameworks")
+
+    # get -x engine
+    _get_cocos2dx(x_dir, framework_dir)
+
+    # get -js engine
+    _get_cocos2djs(js_dir, framework_dir)
 
     # change the mode of all the files
     pkg_dir = os.path.join(dst_dir, "cocos")
     run_shell("chmod -R a=rwx %s" % pkg_dir)
 
-    # remove the zip file
-    print("> Remove the zip file")
-    os.remove(zip_path)
-    print("> Remove succeed!")
 
 if __name__ == "__main__":
     parser = OptionParser()
-    parser.add_option('-d', '--dir', dest='repo_dir', help='directory of engine')
-    parser.add_option('-n', '--name', dest='repo_name', default='cocos2d-x', help='the name of git repository')
+    parser.add_option('-x', dest='x_dir', help='directory of cocos2d-x engine')
+    parser.add_option('-j', '--js', dest='js_dir', help='directory of cocos2d-js engine')
     opts, args = parser.parse_args()
 
-    get_engine(opts.repo_dir, opts.repo_name)
+    get_engine(opts.x_dir, opts.js_dir)
