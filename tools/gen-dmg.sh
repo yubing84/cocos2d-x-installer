@@ -3,6 +3,9 @@
 
 PROJ_NAME=$1
 
+WIN_WIDTH=770
+WIN_HEIGHT=410
+
 BASEDIR="$( cd "$( dirname "$0" )" && pwd )"
 RELEASE_DIR="${BASEDIR}/../release"
 PKG_FILE_PATH="${RELEASE_DIR}/${PROJ_NAME}.pkg"
@@ -35,9 +38,12 @@ fi
 pushd /tmp
 
 "${BASEDIR}/create-dmg/create-dmg" \
+    --window-size ${WIN_WIDTH} ${WIN_HEIGHT} \
     --volicon "${RES_DIR}/Icon.icns" \
     --volname "${PROJ_NAME}" \
-    --icon-size 128 \
+    --background "${RES_DIR}/dmg_background.jpg" \
+    --icon-size 192 \
+    --icon "${PROJ_NAME}.pkg" 590 165 \
     "${PROJ_NAME}.dmg" "${TMP_DIR}/${PROJ_NAME}.pkg"
 
 popd
