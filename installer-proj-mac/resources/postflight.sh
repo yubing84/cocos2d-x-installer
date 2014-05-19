@@ -3,6 +3,8 @@
 SRC_X_DIR="/Applications/cocos/frameworks/cocos2d-x"
 DST_X_DIR="/Applications/cocos/frameworks/cocos2d-js/frameworks/js-bindings"
 
+REMOVE_LIST=("templates" "tests" "tools")
+
 # copy the -x into -js
 if [ -d ${SRC_X_DIR} ]; then
     if [ ! -d "${DST_X_DIR}" ]; then
@@ -42,6 +44,16 @@ if [ -d ${SRC_X_DIR} ]; then
             rm -f "${TEMP_FILE}"
         fi
     fi
+
+    # remove the dirs not used by js
+    REMOVE_NUM=${#REMOVE_LIST[@]}
+    for ((i=0; i<${REMOVE_NUM}; i++))
+    do
+        REMOVE_DIR="${DST_X_DIR}/cocos2d-x/${REMOVE_LIST[$i]}"
+        if [ -d "${REMOVE_DIR}" ]; then
+            rm -rf "${REMOVE_DIR}"
+        fi
+    done
 
     chmod -R a+w "${DST_X_DIR}"
 fi
