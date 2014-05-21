@@ -6,13 +6,13 @@
 #define MyAppPublisher "Chukong-inc"
 #define MyAppURL "http://www.cocos2d-x.org/"
 #define MyAppExeName "ide\Cocos Code IDE.exe"
-#define BitFlag "64bit"
+#define BitFlag "32bit"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
 ; Do not use the same AppId value in installers for other applications.
 ; (To generate a new GUID, click Tools | Generate GUID inside the IDE.)
-AppId={{3082A53D-39C8-48CA-96C0-94F16E249523}
+AppId={{745394EB-2BB3-4C24-823E-E3A0D81FCA26}
 AppName={#MyAppName}
 AppVersion={#MyAppVersion}
 ;AppVerName={#MyAppName} {#MyAppVersion}
