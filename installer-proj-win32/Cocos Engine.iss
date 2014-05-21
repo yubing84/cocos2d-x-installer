@@ -6,7 +6,6 @@
 #define MyAppPublisher "Chukong-inc"
 #define MyAppURL "http://www.cocos2d-x.org/"
 #define MyAppExeName "ide\Cocos Code IDE.exe"
-#define BitFlag "32bit"
 
 [Setup]
 ; NOTE: The value of AppId uniquely identifies this application.
