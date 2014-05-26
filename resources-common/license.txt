@@ -1,7 +1,8 @@
-Copyright (c) 2013-2014 Chukong Technologies
-Copyright (c) 2010-2012 cocos2d-x community
-(see each file to see the different copyright owners)
+Copyright (c) 2014 Chukong Technologies
 
+(see each section to read the different copyright owners)
+
+Cocos2d-x
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,3 +21,106 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+
+Cocos2d-js
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+CocoStudio & Code IDE
+
+LICENSE AGREEMENT
+
+For purposes of this License Agreement, "CocoStudio" means the game development tool of the same name created by Chukong, including without limitation a scene editor, animation editor, GUI editor, data editor and 3D model editor, together with any updates thereto.
+
+CocoStudio is licensed to you subject to the terms of this License Agreement (“License Agreement”). This License Agreement forms a legally binding contract between you and Chukong Technologies Incorporated Company Limited, a Chinese Beijing corporation at Floor 20, No.6 Futong East Street, Chaoyang District, Beijing 100102, China (“Chukong”) in relation to your use of CocoStudio. 
+
+IN ORDER TO USE COCOSTUDIO, YOU MUST FIRST AGREE TO THIS LICENSE AGREEMENT. YOU ARE PROHIBITED FROM USING COCOSTUDIO IF YOU DO NOT ACCEPT THIS LICENSE AGREEMENT.  BY DOWNLOADING, INSTALLING, COPYING OR OTHERWISE USING COCOSTUDIO, YOU ACCEPT THE TERMS AND CONDITIONS OF THIS LICENSE AGREEMENT. IF YOU DO NOT AGREE WITH ANY OF THE TERMS OR CONDITIONS OF THIS LICENSE AGREEMENT, DO NOT PROCEED WITH THE DOWNLOADING, COPYING, INSTALLATION OR ANY OTHER USE OF COCOSTUDIO OR ANY PORTION THEREOF AS YOU HAVE NO RIGHTS TO DO SO. COCOSTUDIO IS PROTECTED BY INTERNATIONAL COPYRIGHT LAWS, AS WELL AS OTHER INTELLECTUAL PROPERTY LAWS AND TREATIES. THE SOFTWARE IS LICENSED, NOT SOLD.
+
+1. License Grant and Acceptance.
+
+1.1 By downloading, installing copying or otherwise using CocoStudio, you hereby accept all of the terms of this License Agreement without modification.  If you are downloading, installing copying or otherwise using CocoStudio on behalf of your employer or other entity, then you hereby agree that you are entering into this License Agreement on behalf of your employer or other entity, and you represent and warrant that you have full legal authority to bind your employer or such entity to this License Agreement. If you do not have the requisite authority, you may not accept the License Agreement or use CocoStudio on behalf of your employer or other entity.
+
+1.2 Subject to the terms of this License Agreement, Chukong grants you a limited, worldwide, royalty­free, non­assignable, revocable and non­exclusive license to use CocoStudio solely to develop applications and games on your target platforms (each individually, an “Application,” and collectively, the “Applications”).
+
+1.3 You may not use CocoStudio for any purpose not expressly permitted by this License Agreement. Except to the extent required by applicable third party licenses, you may not: (a) copy (except for backup purposes), modify, adapt, redistribute, decompile, reverse engineer, disassemble, or create derivative works of CocoStudio or any part of CocoStudio; (b) combine any part of CocoStudio with other software, or distribute any software incorporating a part of CocoStudio; or (c) create “forks” or other derivative works of CocoStudio, or distribute, participate in the creation of, or promote in any way any derivative works of CocoStudio.  You may not redistribute CocoStudio or any part of its documentation, whether alone or as part of any software (including without limitation, any Application), without the express written consent of Chukong.  Without limiting the foregoing, you may not redistribute CocoStudio as part of any development toolkit or library, an application builder, a website builder or any software or tool that is intended for use by software, application, or website developers or designers. 
+
+1.4 Use, reproduction and distribution of components of CocoStudio licensed under an open source software license are governed solely by the terms of that open source software license and not this License Agreement.
+
+1.5 You agree to use CocoStudio and write applications only for purposes that are permitted by (a) this License Agreement and (b) any applicable law, regulation or generally accepted practices or guidelines in the relevant jurisdictions.
+
+1.6 You agree that you are solely responsible for (and that Chukong has no responsibility to you or to any third party for) any data, content, or resources that you create, transmit or display through CocoStudio, and for the consequences of your actions (including any loss or damage which Chukong may suffer) by doing so.
+
+1.7 You agree that you are solely responsible for (and that Chukong has no responsibility to you or to any third party for) any breach of your obligations under this License Agreement, any applicable third party contract or Terms of Service, or any applicable law or regulation, and for the consequences (including any loss or damage which Chukong or any third party may suffer) of any such breach.
+
+1.8 You may not use CocoStudio and may not accept the License Agreement if you are a person barred from receiving CocoStudio under the laws of the country in which you are resident or from which you use CocoStudio.
+
+2. Ownership.
+
+2.1 You agree that Chukong or third parties own all legal right, title and interest in and to CocoStudio, including any Intellectual Property Rights that subsist in CocoStudio. "Intellectual Property Rights" means any and all rights under patent law, copyright law, trade secret law, trademark law, and any and all other proprietary rights. Chukong reserves all rights not expressly granted to you.	
+
+2.2 Nothing in this License Agreement gives you a right to use any of Chukong’s trade names, trademarks, service marks, logos, domain names, or other distinctive brand features.  You agree that you will not remove, obscure, or alter any proprietary rights notices (including copyright and trademark notices) that may be affixed to or contained within CocoStudio.
+
+2.3 Chukong agrees that it obtains no right, title or interest from you (or your licensors) under this License Agreement in or to any applications that you develop using CocoStudio, including any Intellectual Property Rights that exist in those products.
+
+3. Term and Termination.
+
+3.1 The term of this License Agreement will continue until terminated by either you or Chukong as set out below.
+
+3.2 If you want to terminate this License Agreement, you may do so by ceasing your use of CocoStudio
+
+3.3 Chukong may terminate this License Agreement with you at any time if:
+(A) you breach any provision of this License Agreement; or
+(B) Chukong is required to do so by law; or
+(C) any partner with whom Chukong offered certain parts of CocoStudio to you has terminated its relationship with Chukong or ceased to offer certain parts of CocoStudio to you; or
+(D) Chukong decides to no longer provide CocoStudio or certain parts of CocoStudio to users in the country in which you are resident or from which you use the service, or the provision of CocoStudio to you by Chukong is, in Chukong’s sole discretion, no longer commercially viable.
+
+3.4 Upon termination of this License Agreement for any reasons, all licenses granted to you under this License Agreement immediately terminate, and you shall cease using CocoStudio following termination.  Sections 2, 3.4, and 4 through 6 survive any termination of this Agreement.
+
+4. NO WARRANTIES.
+
+4.1 YOU EXPRESSLY UNDERSTAND AND AGREE THAT YOUR USE OF COCOSTUDIO IS AT YOUR SOLE RISK AND THAT COCOSTUDIO IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY KIND FROM CHUKONG.
+
+4.2 YOUR USE OF COCOSTUDIO AND ANY MATERIAL DOWNLOADED OR OTHERWISE OBTAINED THROUGH THE USE OF COCOSTUDIO IS AT YOUR OWN DISCRETION AND RISK AND YOU ARE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR COMPUTER SYSTEM OR OTHER DEVICE OR LOSS OF DATA THAT RESULTS FROM SUCH USE.
+
+4.3 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, CHUKONG FURTHER EXPRESSLY DISCLAIMS ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES AND CONDITIONS OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON­INFRINGEMENT.
+
+5. LIMITATION OF LIABILITY; INDEMNIFICATION.
+
+5.1 TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, YOU EXPRESSLY UNDERSTAND AND AGREE THAT CHUKONG, ITS SUBSIDIARIES AND AFFILIATES, AND ITS LICENSORS SHALL NOT BE LIABLE TO YOU UNDER ANY THEORY OF LIABILITY FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES THAT MAY BE INCURRED BY YOU, INCLUDING ANY LOSS OF DATA, WHETHER OR NOT CHUKONG OR ITS REPRESENTATIVES HAVE BEEN ADVISED OF OR SHOULD HAVE BEEN AWARE OF THE POSSIBILITY OF ANY SUCH LOSSES ARISING.  SOME JURISDICTIONS DO NOT PERMIT LIMITATIONS ON CERTAIN LIABILITIES, AND THE FOREGOING LIMITATION OF LIABILITY DO NOT APPLY TO YOU TO THE EXTENT THEY ARE NOT PERMITTED IN YOUR JURISDICTION.
+
+5.2 To the maximum extent permitted by law, you agree to defend, indemnify and hold harmless Chukong, its affiliates and their respective directors, officers, employees and agents from and against any and all claims, actions, suits or proceedings, as well as any and all losses, liabilities, damages, costs and expenses (including reasonable attorneys’ fees) arising out of or accruing from (a) your use of CocoStudio, (b) any Application you develop via CocoStudio that actually or allegedly infringes any copyright, trademark, trade secret, trade dress, patent or other intellectual property right of any person or defames any person or violates their rights of publicity or privacy, and (c) any non­compliance by you with this License Agreement.
+
+6. Miscellaneous. 
+
+6.1 In order to continually innovate and improve CocoStudio, Chukong may collect certain usage statistics from the software including but not limited to a unique identifier, associated IP address, version number of the software, and information on which tools and/or services in CocoStudio are being used and how they are being used. Before any of this information is collected, CocoStudio will notify you and seek your consent. If you withhold consent, the information will not be collected.  The data collected is examined in the aggregate to improve CocoStudio and is maintained in accordance with Chukong’s Privacy Policy.
+
+6.2 You agree that if Chukong does not exercise or enforce any legal right or remedy which is contained in this License Agreement (or which Chukong has the benefit of under any applicable law), this will not be taken to be a formal waiver of Chukong rights and that those rights or remedies will still be available to Chukong.
+
+6.3 You agree to be identified as a customer of Chukong and you agree that Chukong may refer to you by name, trade name and trademark, if applicable, and may briefly describe your business in our marketing materials and web site.
+
+6.4 There are no implied licenses or other implied rights granted by Chukong under this License Agreement, and all rights, except for those expressly granted hereunder, shall remain with Chukong and its licensors. 
+
+6.5 If any court of law, having the jurisdiction to decide on this matter, rules that any provision of this License Agreement is invalid, then that provision will be removed from this License Agreement without affecting the rest of this License Agreement. The remaining provisions of this License Agreement will continue to be valid and enforceable.
+
+6.6 You acknowledge and agree that each member of the group of companies of which Chukong is the parent shall be third party beneficiaries to this License Agreement and that such other companies shall be entitled to directly enforce, and rely upon, any provision of this License Agreement that confers a benefit on (or rights in favor of) them. Other than this, no other person or company shall be third party beneficiaries to this License Agreement.
+
+6.7 The rights granted in this License Agreement may not be assigned or transferred by you without the prior written approval of Chukong.  Further, you may not delegate your responsibilities or obligations under this License Agreement without the prior written approval of Chukong.
+
+6.8 This License Agreement constitutes the whole legal agreement between you and Chukong and governs your use of CocoStudio, and entirely replaces any prior agreements between you and Chukong in relation to CocoStudio.
+Last Updated September 24, 2013
